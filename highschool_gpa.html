@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title in Tab -->
+  <title>GPA Companion</title>
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body id="highschool_page">
+
+  <div class="container-hs">
+
+    <!-- Side Menu (1.0) -->
+    <div id="left" class="sidemenu">
+
+      <!-- Side Header (0.3) -->
+      <div class="side_header">
+        <h1>GPA Companion</h1>
+      </div>
+
+      <!-- Side Options (0.4) -->
+      <ul class="side_options">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="college_gpa.html">College</a></li>
+        <li><a href="highschool_gpa.html">Highschool</a></li>
+        <li><a href="final_grade.html">Final Grade</a></li>
+      </ul>
+
+    </div>
+
+    <div class="course">
+
+      <!-- Course Header (2.1.1) -->
+      <div class="course-header">
+        <h1>Courses</h1>
+      </div>
+
+      <!-- Course Input (2.1.2) -->
+      <div id="hsCourse-input">
+        <input type="text" placeholder="Course #1">
+        <br>
+        <br>
+        <input type="text" placeholder="Course #2">
+        <br>
+        <br>
+      </div>
+
+      <div id="buttons">
+        <!-- Add Course Button (2.1.3) -->
+        <button id="addCourseHS-button" type="button">ADD COURSE</button>
+        <!-- Remove Course Button (2.1.4) () -->
+        <button class="removeCourseHS-button" type="button" onclick="window.location.reload()">RESTART</button>
+      </div>
+
+    </div>
+
+    <div class="grade">
+
+      <!-- Grade Header (2.2.1) -->
+      <div class="grade-header">
+        <h1>Grades</h1>
+      </div>
+
+      <!-- Grade Input (2.2.2) -->
+      <div id="hsGrade-input">
+
+        <select id="hsGrade1">
+          <option value "" disabled selected hidden>Grade</option>
+          <option value="4.0">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3.0">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2.0">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1.0">D</option>
+          <option value="0.7">D-</option>
+          <option value="0.0">F</option>
+        </select>
+
+        <br>
+        <br>
+
+        <select id="hsGrade2">
+          <option value "" disabled selected hidden>Grade</option>
+          <option value="4.0">A</option>
+          <option value="3.7">A-</option>
+          <option value="3.3">B+</option>
+          <option value="3.0">B</option>
+          <option value="2.7">B-</option>
+          <option value="2.3">C+</option>
+          <option value="2.0">C</option>
+          <option value="1.7">C-</option>
+          <option value="1.3">D+</option>
+          <option value="1.0">D</option>
+          <option value="0.7">D-</option>
+          <option value="0.0">F</option>
+        </select>
+
+        <br>
+        <br>
+
+      </div>
+
+    </div>
+
+    <div class="hsCredit">
+
+      <!-- Credit Header (2.3.1) -->
+      <div class="credit-header">
+        <h1>Credits</h1>
+      </div>
+
+      <!-- Credit Input (2.3.2) -->
+      <div id="hsCredit-input">
+        <input type="text" placeholder="Credits" id="hsCredit1">
+        <br>
+        <br>
+        <input type="text" placeholder="Credits" id="hsCredit2">
+        <br>
+        <br>
+      </div>
+
+      <h2 id="hsGpa-output"></h2>
+
+    </div>
+
+    <div class="course-type">
+
+      <div class="courseType-header">
+        <h1>Weight</h1>
+      </div>
+
+      <div id="courseType-input">
+        <select id="courseType1">
+          <option value "" disabled selected hidden>Course Type</option>
+          <option value="0.0">Regular</option>
+          <option value="0.5">Honors</option>
+          <option value="1.0">AP/IB</option>
+          <option value="1.0">College</option>
+        </select>
+
+        <br>
+        <br>
+
+        <select id="courseType2">
+          <option value "" disabled selected hidden>Course Type</option>
+          <option value="0.0">Regular</option>
+          <option value="0.5">Honors</option>
+          <option value="1.0">AP/IB</option>
+          <option value="1.0">College</option>
+        </select>
+
+        <br>
+        <br>
+
+      </div>
+
+      <!-- Calculate Button (2.3.3) -->
+      <button class="calculateHS-button" type="button" onclick="calculateHSGPA()">CALCULATE</button>
+
+    </div>
+
+  </div>
+
+</body>
+
+<!-- Link JS -->
+<script src="js\app.js" charset="utf-8" async></script>
+
+</html>

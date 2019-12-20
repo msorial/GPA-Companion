@@ -1,0 +1,473 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:700i");
+@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Arvo&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+/* Container (0.1) */
+.container {
+  display: grid;
+  grid-template-columns: minmax(335px, auto) auto auto auto;
+  grid-gap: 15px;
+}
+
+/* Side Menu (0.2) */
+#left {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: #102027;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+/* Side Menu - Makes Scrollbar Transparent (0.2) */
+.sidemenu::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
+/* Side Menu Header (0.3) */
+.side_header {
+  color: #fee140;
+  font-family: Roboto;
+  font-size: 22px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Side Options (0.4) */
+.side_options {
+  font-family: Lato;
+  font-size: 23px;
+  text-align: center;
+  margin-top: 5px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  line-height: 2.7;
+  list-style-type: none; /* Removes Bullet Points from List */
+}
+
+/* Side Options (0.4) */
+.side_options a:link,
+a:visited {
+  color: #f2f2f2;
+  text-decoration: none; /* Removes Underline from List Items */
+}
+
+/* Side Options (0.4) */
+.side_options a:hover {
+  color: #fee140;
+}
+
+/* Home Page (1) */
+#home_page {
+  background: #43cea2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(45deg, #43cea2, #185a9d); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    45deg,
+    #43cea2,
+    #185a9d
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Home Description Column (1.1) */
+.site-description {
+  padding: 20px;
+}
+
+/* Home Mission Statement (1.1.1) */
+.site-mission {
+  background: #102027;
+  color: #f2f2f2;
+  font-family: Arvo;
+  font-size: 21px;
+  padding: 15px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* College Page (2) */
+#college_page {
+  background: #43cea2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(135deg, #43cea2, #185a9d); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    135deg,
+    #43cea2,
+    #185a9d
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Course Column (2.1) */
+.course {
+  text-align: center;
+}
+
+/* Coure Header (2.1.1) */
+.course-header {
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 20px;
+  padding: 20px;
+}
+
+/* Course, Credit Input (2.1.2, 2.3.2) */
+input[type="text"] {
+  border-radius: 3px;
+  outline: none;
+  padding: 5px;
+  border: none;
+  background: #f2f2f2;
+  font-family: Montserrat;
+  text-align: left;
+  margin-top: 10px;
+}
+
+/* Course, Credit Input (2.1.2, 2.3.2) */
+input:focus {
+  filter: brightness(90%);
+}
+
+/* Add Course Button (2.1.3)  */
+#addCourse-button {
+  margin-top: 160px;
+  margin-bottom: 5px;
+  padding: 7px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  border: none;
+  color: #2ecc40;
+  font-family: Montserrat;
+}
+
+/* Add Course Button (2.1.3)  */
+#addCourse-button:hover {
+  filter: brightness(90%);
+}
+
+/* Add Course Button (2.1.3)  */
+#addCourse-button:focus {
+  outline: none;
+}
+
+/* Remove Course Button (2.1.4) */
+.removeCourse-button {
+  margin-bottom: 35px;
+  padding: 7px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  border: none;
+  color: #ff4136;
+  font-family: Montserrat;
+}
+
+/* Remove Course Button (2.1.4) */
+.removeCourse-button:hover {
+  filter: brightness(90%);
+}
+
+/* Remove Course Button (2.1.4) */
+.removeCourse-button:focus {
+  outline: none;
+}
+
+/* Grade Column (2.2) */
+.grade {
+  text-align: center;
+}
+
+/* Grade Header (2.2.1) */
+.grade-header {
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 20px;
+  padding: 20px;
+}
+
+/* Grade Input (2.2.2) */
+select {
+  border-radius: 3px;
+  outline: none;
+  padding: 5px;
+  border: none;
+  background: #f2f2f2;
+  font-family: Montserrat;
+  text-align: center;
+  margin-top: 10px;
+  height: 26px;
+  width: 181.34px;
+}
+
+/* Grade Input (2.2.2) */
+select:focus {
+  filter: brightness(90%);
+}
+
+/* Grade Input (2.2.2) */
+select:hover {
+  filter: brightness(90%);
+}
+
+/* GPA Output (2.2.3) */
+#gpa-output {
+  font-size: 40px;
+  margin-top: 140px;
+  margin-bottom: 35px;
+  padding: 7px;
+  font-family: Titillium Web;
+  color: #f2f2f2;
+}
+
+/* Credit Column (2.3) */
+.credit {
+  text-align: center;
+  padding-right: 15px;
+}
+
+/* Credit Header (2.3.1) */
+.credit-header {
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 20px;
+  padding: 20px;
+}
+
+/* Calculate Button (2.3.3) */
+#calculate-button {
+  margin-top: 160px;
+  margin-bottom: 35px;
+  padding: 7px;
+  border-radius: 3px;
+  background-color: #f2f2f2;
+  border: none;
+  color: #102027;
+  font-family: Montserrat;
+}
+
+/* Calculate Button (2.3.3) */
+#calculate-button:hover {
+  filter: brightness(90%);
+}
+
+/* Calculate Button (2.3.3) */
+#calculate-button:focus {
+  outline: none;
+}
+
+/* Highschool Page (3) */
+#highschool_page {
+  background: #43cea2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(225deg, #43cea2, #185a9d); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to 225deg,
+    #43cea2,
+    #185a9d
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container-hs {
+  display: grid;
+  grid-template-columns: minmax(335px, auto) auto auto auto auto;
+  grid-gap: 15px;
+}
+
+#addCourseHS-button {
+  margin-top: 160px;
+  margin-bottom: 5px;
+  padding: 7px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  border: none;
+  color: #2ecc40;
+  font-family: Montserrat;
+}
+
+#addCourseHS-button:hover {
+  filter: brightness(90%);
+}
+
+#addCourseHS-button:focus {
+  outline: none;
+}
+
+.removeCourseHS-button {
+  margin-bottom: 35px;
+  padding: 7px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  border: none;
+  color: #ff4136;
+  font-family: Montserrat;
+}
+
+/* Remove Course Button (2.1.4) */
+.removeCourseHS-button:hover {
+  filter: brightness(90%);
+}
+
+/* Remove Course Button (2.1.4) */
+.removeCourseHS-button:focus {
+  outline: none;
+}
+
+.hsCredit {
+  text-align: center;
+}
+
+#hsGpa-output {
+  font-size: 40px;
+  margin-top: 140px;
+  margin-bottom: 35px;
+  padding: 7px;
+  font-family: Titillium Web;
+  color: #f2f2f2;
+}
+
+.course-type {
+  text-align: center;
+  padding-right: 15px;
+}
+
+.courseType-header {
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.calculateHS-button {
+  margin-top: 160px;
+  margin-bottom: 35px;
+  padding: 7px;
+  border-radius: 3px;
+  background-color: #f2f2f2;
+  border: none;
+  color: #102027;
+  font-family: Montserrat;
+}
+
+/* Calculate Button (2.3.3) */
+.calculateHS-button:hover {
+  filter: brightness(90%);
+}
+
+/* Calculate Button (2.3.3) */
+.calculateHS-button:focus {
+  outline: none;
+}
+
+/* Final Grade Page (4) */
+#finalgrade_page {
+  background: #43cea2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(315deg, #43cea2, #185a9d); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    315deg,
+    #43cea2,
+    #185a9d
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Final Grade Middle Column (4.1) */
+.fgMiddle-column {
+  text-align: center;
+  padding: 10px;
+}
+
+/* Final Grade Calculator Description (4.1.1) */
+.fg-description {
+  background: #102027;
+  border-radius: 5px;
+  color: #f2f2f2;
+  font-family: Arvo;
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Final Grade Calculator (4.1.2) */
+.fg-calculator {
+  padding: 20px;
+  background: #102027;
+  border-radius: 5px;
+}
+
+/* Grade Input Labels (4.1.3) */
+.grade-label {
+  font-family: Montserrat;
+  color: #f2f2f2;
+}
+
+/* Current Grade Input (4.1.4) */
+#current-grade {
+  width: 200px;
+}
+
+/* Desired Grade Input (4.1.5) */
+#desired-grade {
+  width: 200px;
+}
+
+/* Final Weight Input (4.1.6) */
+#final-weight {
+  width: 200px;
+}
+
+/* Calculate Required Grade Button (4.1.7) */
+.reqGrade-button {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  padding: 7px;
+  border-radius: 3px;
+  background-color: #f2f2f2;
+  border: none;
+  color: #102027;
+  font-family: Montserrat;
+}
+
+/* Calculate Required Grade Button (4.1.7) */
+.reqGrade-button:hover {
+  filter: brightness(90%);
+}
+
+/* Calculate Required Grade Button (4.1.7) */
+.reqGrade-button:focus {
+  outline: none;
+}
+
+/* Required Grade Output (4.1.8) */
+#reqGrade-output {
+  font-family: Lato;
+  color: #102027;
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
