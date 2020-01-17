@@ -1,14 +1,13 @@
- var counter = 1;
+var counter = 1;
+var HScounter = 1;
 
 // Function Creates new Course Input and Increments Placeholder +1
 (function() {
-  
   var addCourseButton = document.getElementById("addCourse-button");
   var courseInput = document.getElementById("course-input");
+  counter++;
 
   var addCourse = function() {
-    counter++;
-	
     var input = document.createElement("input");
     var space = document.createElement("br");
     var space2 = document.createElement("br");
@@ -26,7 +25,6 @@
       "click",
       function() {
         addCourse();
-		
       }.bind(this)
     );
   }
@@ -34,12 +32,10 @@
 
 // Function Creates new Grade Select and Increments ID by +1
 (function() {
-  
   var addCourseButton = document.getElementById("addCourse-button");
   var gradeInput = document.getElementById("grade-input");
 
   var addGrade = function() {
-
     var select = document.createElement("select");
     var optPH = document.createElement("option");
     var optA = document.createElement("option");
@@ -55,6 +51,7 @@
     var optDM = document.createElement("option");
     var optF = document.createElement("option");
 
+    optPH.value = "";
     optPH.text = "Grade";
     optPH.hidden = true;
 
@@ -131,12 +128,10 @@
 
 // Function Creates new Credit Input and Increments ID by +1
 (function() {
- 
   var addCourseButton = document.getElementById("addCourse-button");
   var creditInput = document.getElementById("credit-input");
 
   var addCredit = function() {
-   
     var input = document.createElement("input");
     var space = document.createElement("br");
     var space2 = document.createElement("br");
@@ -151,7 +146,6 @@
   };
 
   if (addCourseButton) {
-	  
     addCourseButton.addEventListener(
       "click",
       function() {
@@ -160,57 +154,50 @@
     );
   }
 })();
-  
-// Function Calculates College GPA 
+
+// Function Calculates College GPA
 function calculateCollegeGPA() {
-  
-	var sum = 0;
-	var creditSums = 0;
-	var grades = [];
-	var credits = [];
-	var finalGPA = 0;
-	var j;
-	var i;
-	
-  for(j = 1; j < counter+1; j++){
-	  if((document.getElementById("grade" + j).value) !== ""){
-		
-		grades.push(parseFloat(document.getElementById("grade" + j).value));
-		
-		}
-	 
-	  if((document.getElementById("credit" + j).value) !== ""){
+  var sum = 0;
+  var creditSums = 0;
+  var grades = [];
+  var credits = [];
+  var finalGPA = 0;
 
-		credits.push(parseFloat(document.getElementById("credit" + j).value));
-		
-		}
-  }
-   
-	for(i = 0; i < credits.length; i++){
-		
-		sum = sum + credits[i];
-		creditSums = creditSums + (grades[i] * credits[i]);
-	}
-	
-    finalGPA = creditSums/sum;
+  var i;
 
-	document.getElementById("gpa-output").innerHTML = finalGPA.toFixed(2);
+  for (i = 1; i < counter + 1; i++) {
+    if (document.getElementById("grade" + i).value !== "") {
+      grades.push(parseFloat(document.getElementById("grade" + i).value));
+    }
+
+    if (document.getElementById("credit" + i).value !== "") {
+      credits.push(parseFloat(document.getElementById("credit" + i).value));
+    }
   }
-  
+
+  for (i = 0; i < credits.length; i++) {
+    sum = sum + credits[i];
+    creditSums = creditSums + grades[i] * credits[i];
+  }
+
+  finalGPA = creditSums / sum;
+
+  document.getElementById("gpa-output").innerHTML = finalGPA.toFixed(2);
+}
+
 // Function Creates new Course Input and Increments Placeholder +1 HIGHSCHOOL
 (function() {
-  var counter = 1;
   var addCourseHSButton = document.getElementById("addCourseHS-button");
   var hsCourseInput = document.getElementById("hsCourse-input");
 
   var addHSCourse = function() {
-    counter++;
+    HScounter++;
     var input = document.createElement("input");
     var space = document.createElement("br");
     var space2 = document.createElement("br");
 
     input.type = "text";
-    input.placeholder = "Course #" + counter;
+    input.placeholder = "Course #" + HScounter;
 
     hsCourseInput.appendChild(input);
     hsCourseInput.appendChild(space);
@@ -229,12 +216,10 @@ function calculateCollegeGPA() {
 
 // Function Creates new Grade Select and Increments ID by +1 HIGHSCHOOL
 (function() {
-  var counter = 1;
   var addCourseHSButton = document.getElementById("addCourseHS-button");
   var hsGradeInput = document.getElementById("hsGrade-input");
 
   var addHSGrade = function() {
-    counter++;
     var select = document.createElement("select");
     var optPH = document.createElement("option");
     var optA = document.createElement("option");
@@ -250,6 +235,7 @@ function calculateCollegeGPA() {
     var optDM = document.createElement("option");
     var optF = document.createElement("option");
 
+    optPH.value = "";
     optPH.text = "Grade";
     optPH.hidden = true;
 
@@ -304,7 +290,7 @@ function calculateCollegeGPA() {
     select.add(optF, null);
 
     select.placeholder = "Grade";
-    select.id = "hsGrade" + counter;
+    select.id = "hsGrade" + HScounter;
 
     var space = document.createElement("br");
     var space2 = document.createElement("br");
@@ -325,14 +311,11 @@ function calculateCollegeGPA() {
 })();
 
 // Function Creates new Credit Input and Increments ID by +1 HIGHSCHOOL
-var HScounter = 1;
 (function() {
-
   var addCourseHSButton = document.getElementById("addCourseHS-button");
   var hsCreditInput = document.getElementById("hsCredit-input");
 
   var addHSCredit = function() {
-    HScounter++;
     var input = document.createElement("input");
     var space = document.createElement("br");
     var space2 = document.createElement("br");
@@ -358,12 +341,10 @@ var HScounter = 1;
 
 // Function Creates new Course Type Select and Increments ID by +1 HIGHSCHOOL
 (function() {
-  
   var addCourseHSButton = document.getElementById("addCourseHS-button");
   var courseTypeInput = document.getElementById("courseType-input");
 
   var addCourseType = function() {
-    
     var select = document.createElement("select");
     var optPH = document.createElement("option");
     var optR = document.createElement("option");
@@ -413,34 +394,39 @@ var HScounter = 1;
   }
 })();
 
-// Function Calculates HighSchool GPA 
+// Function Calculates High School GPA
 function calculateHSGPA() {
-  
   var grades = [];
   var credits = [];
   var courseweights = [];
   var sumofCredits = 0;
-  
+  var finalGPA = 0;
+
   var j;
-  
-	for(j = 1; j < HScounter+1; j++){
-		
-		grades.push(parseFloat(document.getElementById("hsGrade" + j).value));
-		credits.push(parseFloat(document.getElementById("hsCredit" + j).value));
-		if((parseFloat(document.getElementById("courseType" + j).value)) !== "");{
-		courseweights.push(parseFloat(document.getElementById("courseType" + j).value));}
-	}
 
-	for(j = 0; j < credits.length; j++){
-		
-		sumofCredits = sumofCredits + grades[j] + courseweights[j];
-	}
-	console.log(sumofCredits);
-    var finalGPA = sumofCredits/HScounter;
+  for (j = 1; j < HScounter + 1; j++) {
+    if (document.getElementById("hsGrade" + j).value !== "") {
+      grades.push(parseFloat(document.getElementById("hsGrade" + j).value));
+    }
 
-    document.getElementById("hsGpa-output").innerHTML = finalGPA.toFixed(2);
+    if (document.getElementById("hsCredit" + j).value !== "") {
+      credits.push(parseFloat(document.getElementById("hsCredit" + j).value));
+    }
+
+    if (document.getElementById("courseType" + j).value !== "") {
+      courseweights.push(parseFloat(document.getElementById("courseType" + j).value));
+    }
   }
-  
+
+  for (j = 0; j < grades.length; j++) {
+    sumofCredits = sumofCredits + grades[j] + courseweights[j];
+  }
+
+  finalGPA = sumofCredits / grades.length;
+
+  document.getElementById("hsGpa-output").innerHTML = finalGPA.toFixed(2);
+}
+
 // Final Grade Page Calculator to Display Required Grade
 function displayReqGrade() {
   var currentGrade = parseFloat(document.getElementById("current-grade").value);
