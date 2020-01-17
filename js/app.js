@@ -1,11 +1,13 @@
-// Function Creates new Course Input and Increments Placeholder +1
+  var counter = 1;
+   
 (function() {
-  var counter = 2;
+  //var counter = 2;
   var addCourseButton = document.getElementById("addCourse-button");
   var courseInput = document.getElementById("course-input");
 
   var addCourse = function() {
     counter++;
+	
     var input = document.createElement("input");
     var space = document.createElement("br");
     var space2 = document.createElement("br");
@@ -23,6 +25,7 @@
       "click",
       function() {
         addCourse();
+		
       }.bind(this)
     );
   }
@@ -30,12 +33,12 @@
 
 // Function Creates new Grade Select and Increments ID by +1
 (function() {
-  var counter = 2;
+  
   var addCourseButton = document.getElementById("addCourse-button");
   var gradeInput = document.getElementById("grade-input");
 
   var addGrade = function() {
-    counter++;
+
     var select = document.createElement("select");
     var optPH = document.createElement("option");
     var optA = document.createElement("option");
@@ -127,12 +130,12 @@
 
 // Function Creates new Credit Input and Increments ID by +1
 (function() {
-  var counter = 2;
+ 
   var addCourseButton = document.getElementById("addCourse-button");
   var creditInput = document.getElementById("credit-input");
 
   var addCredit = function() {
-    counter++;
+   
     var input = document.createElement("input");
     var space = document.createElement("br");
     var space2 = document.createElement("br");
@@ -147,6 +150,7 @@
   };
 
   if (addCourseButton) {
+	  
     addCourseButton.addEventListener(
       "click",
       function() {
@@ -155,197 +159,45 @@
     );
   }
 })();
-
+  
 // Function Calculates GPA IF ONLY One User Inputs
 function calculateCollegeGPA() {
-  // One Class
-  var checkGrade1 = document.getElementById("grade1").value;
-  var checkCredit1 = document.getElementById("credit1").value;
-  if (checkGrade1 !== "" && checkCredit1 !== "") {
-    var grade1 = parseFloat(document.getElementById("grade1").value);
-    var credit1 = parseFloat(document.getElementById("credit1").value);
-
-    var finalGPA = (grade1 * credit1) / credit1;
-
-    document.getElementById("gpa-output").innerHTML = finalGPA.toFixed(2);
-
-    // Two Classes
-    var checkGrade2 = document.getElementById("grade2").value;
-    var checkCredit2 = document.getElementById("credit2").value;
-    if (checkGrade2 !== "" && checkCredit2 !== "") {
-      var grade2 = parseFloat(document.getElementById("grade2").value);
-      var credit2 = parseFloat(document.getElementById("credit2").value);
-
-      var totalCreditHours = credit1 + credit2;
-      var finalGPA = (grade1 * credit1 + grade2 * credit2) / totalCreditHours;
-
-      document.getElementById("gpa-output").innerHTML = finalGPA.toFixed(2);
-
-      // Three Classes
-      var checkGrade3 = document.getElementById("grade3").value;
-      var checkCredit3 = document.getElementById("credit3").value;
-      if (checkGrade3 !== "" && checkCredit3 !== "") {
-        var grade3 = parseFloat(document.getElementById("grade3").value);
-        var credit3 = parseFloat(document.getElementById("credit3").value);
-
-        var totalCreditHours = credit1 + credit2 + credit3;
-        var finalGPA = (grade1 * credit1 + grade2 * credit2 + grade3 * credit3) / totalCreditHours;
-
-        document.getElementById("gpa-output").innerHTML = finalGPA.toFixed(2);
-
-        // Four Classes
-        var checkGrade4 = document.getElementById("grade4").value;
-        var checkCredit4 = document.getElementById("credit4").value;
-        if (checkGrade4 !== "" && checkCredit4 !== "") {
-          var grade4 = parseFloat(document.getElementById("grade4").value);
-          var credit4 = parseFloat(document.getElementById("credit4").value);
-
-          var totalCreditHours = credit1 + credit2 + credit3 + credit4;
-          var finalGPA = (grade1 * credit1 + grade2 * credit2 + grade3 * credit3 + grade4 * credit4) / totalCreditHours;
-
-          document.getElementById("gpa-output").innerHTML = finalGPA.toFixed(2);
-
-          // Five Classes
-          var checkGrade5 = document.getElementById("grade5").value;
-          var checkCredit5 = document.getElementById("credit5").value;
-          if (checkGrade5 !== "" && checkCredit5 !== "") {
-            var grade5 = parseFloat(document.getElementById("grade5").value);
-            var credit5 = parseFloat(document.getElementById("credit5").value);
-
-            var totalCreditHours = credit1 + credit2 + credit3 + credit4 + credit5;
-            var finalGPA =
-              (grade1 * credit1 + grade2 * credit2 + grade3 * credit3 + grade4 * credit4 + grade5 * credit5) /
-              totalCreditHours;
-
-            document.getElementById("gpa-output").innerHTML = finalGPA.toFixed(2);
-
-            // Six Classes
-            var checkGrade6 = document.getElementById("grade6").value;
-            var checkCredit6 = document.getElementById("credit6").value;
-            if (checkGrade6 !== "" && checkCredit6) {
-              var grade6 = parseFloat(document.getElementById("grade6").value);
-              var credit6 = parseFloat(document.getElementById("credit6").value);
-
-              var totalCreditHours = credit1 + credit2 + credit3 + credit4 + credit5 + credit6;
-              var finalGPA =
-                (grade1 * credit1 +
-                  grade2 * credit2 +
-                  grade3 * credit3 +
-                  grade4 * credit4 +
-                  grade5 * credit5 +
-                  grade6 * credit6) /
-                totalCreditHours;
-
-              document.getElementById("gpa-output").innerHTML = finalGPA.toFixed(2);
-
-              // Seven Classes
-              var checkGrade7 = document.getElementById("grade7").value;
-              var checkCredit7 = document.getElementById("credit7").value;
-              if (checkGrade7 !== "" && checkCredit7) {
-                var grade7 = parseFloat(document.getElementById("grade7").value);
-                var credit7 = parseFloat(document.getElementById("credit7").value);
-
-                var totalCreditHours = credit1 + credit2 + credit3 + credit4 + credit5 + credit6 + credit7;
-                var finalGPA =
-                  (grade1 * credit1 +
-                    grade2 * credit2 +
-                    grade3 * credit3 +
-                    grade4 * credit4 +
-                    grade5 * credit5 +
-                    grade6 * credit6 +
-                    grade7 * credit7) /
-                  totalCreditHours;
-
-                document.getElementById("gpa-output").innerHTML = finalGPA.toFixed(2);
-
-                // Eight Classes
-                var checkGrade8 = document.getElementById("grade8").value;
-                var checkCredit8 = document.getElementById("credit8").value;
-                if (checkGrade8 !== "" && checkCredit8) {
-                  var grade8 = parseFloat(document.getElementById("grade8").value);
-                  var credit8 = parseFloat(document.getElementById("credit8").value);
-
-                  var totalCreditHours = credit1 + credit2 + credit3 + credit4 + credit5 + credit6 + credit7 + credit8;
-                  var finalGPA =
-                    (grade1 * credit1 +
-                      grade2 * credit2 +
-                      grade3 * credit3 +
-                      grade4 * credit4 +
-                      grade5 * credit5 +
-                      grade6 * credit6 +
-                      grade7 * credit7 +
-                      grade8 * credit8) /
-                    totalCreditHours;
-
-                  document.getElementById("gpa-output").innerHTML = finalGPA.toFixed(2);
-
-                  // Nine Classes
-                  var checkGrade9 = document.getElementById("grade9").value;
-                  var checkCredit9 = document.getElementById("credit9").value;
-                  if (checkGrade9 !== "" && checkCredit9) {
-                    var grade9 = parseFloat(document.getElementById("grade9").value);
-                    var credit9 = parseFloat(document.getElementById("credit9").value);
-
-                    var totalCreditHours =
-                      credit1 + credit2 + credit3 + credit4 + credit5 + credit6 + credit7 + credit8 + credit9;
-                    var finalGPA =
-                      (grade1 * credit1 +
-                        grade2 * credit2 +
-                        grade3 * credit3 +
-                        grade4 * credit4 +
-                        grade5 * credit5 +
-                        grade6 * credit6 +
-                        grade7 * credit7 +
-                        grade8 * credit8 +
-                        grade9 * credit9) /
-                      totalCreditHours;
-
-                    document.getElementById("gpa-output").innerHTML = finalGPA.toFixed(2);
-
-                    // Ten Classes
-                    var checkGrade10 = document.getElementById("grade10").value;
-                    var checkCredit10 = document.getElementById("credit10").value;
-                    if (checkGrade10 !== "" && checkCredit10) {
-                      var grade10 = parseFloat(document.getElementById("grade10").value);
-                      var credit10 = parseFloat(document.getElementById("credit10").value);
-
-                      var totalCreditHours =
-                        credit1 +
-                        credit2 +
-                        credit3 +
-                        credit4 +
-                        credit5 +
-                        credit6 +
-                        credit7 +
-                        credit8 +
-                        credit9 +
-                        credit10;
-                      var finalGPA =
-                        (grade1 * credit1 +
-                          grade2 * credit2 +
-                          grade3 * credit3 +
-                          grade4 * credit4 +
-                          grade5 * credit5 +
-                          grade6 * credit6 +
-                          grade7 * credit7 +
-                          grade8 * credit8 +
-                          grade9 * credit9 +
-                          grade10 * credit10) /
-                        totalCreditHours;
-
-                      document.getElementById("gpa-output").innerHTML = finalGPA.toFixed(2);
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+  
+	var sum = 0;
+	var creditSums = 0;
+	var grades = [];
+	var credits = [];
+	var finalGPA = 0;
+  
+  var j;
+  
+  for(j = 1; j < counter+1; j++){
+	  if((document.getElementById("grade" + j).value) !== ""){
+		
+		grades.push(parseFloat(document.getElementById("grade" + j).value));
+		//console.log(document.getElementById("grade" + j).value);
+		}
+	 
+	  if((document.getElementById("credit" + j).value) !== ""){
+		
+		credits.push(parseFloat(document.getElementById("credit" + j).value));
+		//console.log(document.getElementById("credit" + j).value);
+		}
   }
-}
 
+   var i;
+	for(i = 0; i < credits.length; i++){
+		
+		sum = sum + credits[i];
+		creditSums = creditSums + (grades[i] * credits[i]);
+	}
+	
+     finalGPA = creditSums/sum;
+	
+	document.getElementById("gpa-output").innerHTML = finalGPA.toFixed(2);
+
+  }
+  
 // Function Creates new Course Input and Increments Placeholder +1 HIGHSCHOOL
 (function() {
   var counter = 2;
