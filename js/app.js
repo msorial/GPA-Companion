@@ -5,9 +5,9 @@ var HScounter = 1;
 (function() {
   var addCourseButton = document.getElementById("addCourse-button");
   var courseInput = document.getElementById("course-input");
-  counter++;
 
   var addCourse = function() {
+    counter++;
     var input = document.createElement("input");
     var space = document.createElement("br");
     var space2 = document.createElement("br");
